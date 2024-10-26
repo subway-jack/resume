@@ -64,7 +64,7 @@ education:
   - area: MSc Computer Science
     institution: University of Electronic Science and Technology of China, Laboratory of Intelligent Collaborative Computing
     date_start: 2024-09-01
-    date_end: Present
+    date_end: 2027-06-30
     summary: |
       GPA: 3.8/4.0
 
