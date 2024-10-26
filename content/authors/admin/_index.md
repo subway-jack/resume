@@ -3,7 +3,7 @@
 title: 夏博威
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Bo Wei Xia
 
 # Full name (for SEO)
 first_name: Bo Wei
