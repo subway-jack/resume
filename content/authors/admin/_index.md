@@ -61,10 +61,10 @@ education:
   #   button:
   #     text: 'Read Thesis'
   #     url: 'https://example.com'
-  - area: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: MSc Computer Science
+    institution: University of Electronic Science and Technology of China, Laboratory of Intelligent Collaborative Computing
+    date_start: 2024-09-01
+    date_end: Present
     summary: |
       GPA: 3.8/4.0
 
@@ -72,6 +72,7 @@ education:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+
   - area: BSc Information Management and Information Systems
     institution: Ningbo University, School of Business
     date_start: 2020-09-01
