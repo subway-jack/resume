@@ -72,17 +72,19 @@ education:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: BSc Information Management and Information Systems
+    institution: Ningbo University, School of Business
+    date_start: 2020-09-01
+    date_end: 2024-06-30
     summary: |
-      GPA: 3.4/4.0
-  
+      GPA: 3.46/4.0 (Top 7% of the program)
+
       Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Data Structures and Algorithms
+      - Discrete Mathematics
+      - Operating Systems
+      - Computer Networks
+
 work:
   - position: Director of Cloud Infrastructure
     company_name: GenCoin
