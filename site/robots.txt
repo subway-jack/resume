@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://subway-jack.github.io/resume/sitemap.xml

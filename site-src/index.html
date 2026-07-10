@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>@@NAME@@ · Language Agents & Multi-Agent Systems</title>
+  <meta name="description" content="@@SUMMARY@@">
+  <meta name="author" content="@@NAME@@">
+  <meta name="theme-color" content="#087d84">
+  <link rel="canonical" href="https://subway-jack.github.io/resume/">
+  <link rel="alternate" type="application/json" href="profile.json" title="Public profile JSON">
+  <link rel="alternate" type="text/plain" href="llms.txt" title="LLM discovery document">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="icon" href="data:,">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="@@NAME@@">
+  <meta property="og:description" content="@@SUMMARY@@">
+  <meta property="og:image" content="https://subway-jack.github.io/resume/assets/bowei-xia.jpg">
+  <meta property="og:url" content="https://subway-jack.github.io/resume/">
+  <script type="application/ld+json">@@JSON_LD@@</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="@@NAME@@ home">
+      <span class="wordmark-mark">BX</span>
+      <span>@@NAME@@</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#research">Research</a>
+      <a href="#work">Open source</a>
+      <a href="#background">Background</a>
+      <a href="#agents">For agents</a>
+    </nav>
+    <a class="header-command" href="bowei-xia-resume.pdf">CV</a>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <picture class="hero-media" aria-hidden="true">
+        <source srcset="assets/bowei-xia.webp" type="image/webp">
+        <img src="assets/bowei-xia.jpg" alt="" width="1600" height="1600">
+      </picture>
+      <div class="hero-shade"></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">@@NAME_ZH@@ · Computer science researcher</p>
+        <h1 id="hero-title">@@NAME@@</h1>
+        <p class="hero-headline">@@HEADLINE@@</p>
+        <p class="hero-summary">@@SUMMARY@@</p>
+        <div class="hero-actions">
+          <a class="command command-primary" href="#research">Selected evidence</a>
+          <a class="command" href="bowei-xia-resume.pdf">Download CV</a>
+          <a class="command" href="@@GITHUB@@" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-proof" aria-label="Profile status">
+        <span>Public evidence only</span>
+        <span>Verified @@LAST_VERIFIED@@</span>
+      </div>
+    </section>
+
+    <section class="focus-band" aria-label="Research focus">
+      <p>Current focus</p>
+      <ul>@@FOCUS@@</ul>
+    </section>
+
+    <section id="research" class="section research-section">
+      <header class="section-heading">
+        <p class="section-index">01 / Research</p>
+        <div>
+          <h2>Selected publications</h2>
+          <p>Claims stay attached to the paper, venue, and public source.</p>
+        </div>
+      </header>
+      <div class="evidence-list">@@PUBLICATIONS@@</div>
+    </section>
+
+    <section id="work" class="section work-section">
+      <header class="section-heading">
+        <p class="section-index">02 / Build</p>
+        <div>
+          <h2>Open-source systems</h2>
+          <p>Benchmarks, agent infrastructure, and practical interfaces.</p>
+        </div>
+      </header>
+      <div class="project-grid">@@PROJECTS@@</div>
+      <div class="contributions">
+        <div class="subsection-heading">
+          <h3>Upstream contribution</h3>
+          <span>Public pull requests</span>
+        </div>
+        @@CONTRIBUTIONS@@
+      </div>
+    </section>
+
+    <section id="background" class="section background-section">
+      <header class="section-heading">
+        <p class="section-index">03 / Background</p>
+        <div>
+          <h2>Education and recognition</h2>
+          <p>A compact record, with no private address or phone data.</p>
+        </div>
+      </header>
+      <div class="background-grid">
+        <div class="timeline">@@EDUCATION@@</div>
+        <div class="awards">
+          <div class="subsection-heading">
+            <h3>Selected awards</h3>
+            <span>Self-attested resume record</span>
+          </div>
+          @@AWARDS@@
+        </div>
+      </div>
+    </section>
+
+    <section id="agents" class="agent-band">
+      <div class="agent-intro">
+        <p class="section-index">04 / Machine-readable</p>
+        <h2>Public profile endpoints</h2>
+        <p>Versioned, evidence-backed files for search engines and coding agents.</p>
+      </div>
+      <div class="agent-links">
+        <a href="profile.json"><strong>profile.json</strong><span>Canonical structured data</span></a>
+        <a href="resume.md"><strong>resume.md</strong><span>Plain-text professional record</span></a>
+        <a href="llms.txt"><strong>llms.txt</strong><span>Discovery and usage boundary</span></a>
+        <a href=".well-known/agent-profile.json"><strong>agent-profile.json</strong><span>Well-known endpoint map</span></a>
+      </div>
+    </section>
+
+    <section class="contact-band">
+      <div>
+        <p class="section-index">Contact</p>
+        <h2>Research and open-source collaboration</h2>
+      </div>
+      <div class="contact-actions">
+        <a class="command command-dark" href="mailto:@@EMAIL@@">Email</a>
+        <a class="command command-dark" href="@@GITHUB@@" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> @@NAME@@</span>
+    <span>Evidence verified @@LAST_VERIFIED@@</span>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

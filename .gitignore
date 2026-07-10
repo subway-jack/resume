@@ -1,0 +1,7 @@
+resume-src/*.aux
+resume-src/*.log
+resume-src/*.out
+resume-src/*.synctex.gz
+.DS_Store
+.playwright-cli/
+output/

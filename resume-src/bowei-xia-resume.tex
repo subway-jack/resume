@@ -1,0 +1,83 @@
+\documentclass[]{kyvernitis-resume}
+\usepackage{enumitem}
+
+\fullname{Bowei Xia}
+\jobtitle{Language Agents \& Multi-Agent Systems}
+
+\begin{document}
+
+\resumeheader
+{\email{xiabowei350@gmail.com}}
+{\github{subway-jack}}
+{}
+{\href{https://subway-jack.github.io/resume/}{\textcolor{black}{\faGlobeAmericas}\hspace{0.5em}Portfolio}}
+{}
+{}
+
+\begin{section}{EDUCATION}
+  \begin{subsectionnobullet}
+    {University of Electronic Science and Technology of China}
+    {MSc in Computer Science, Laboratory of Intelligent Collaborative Computing}
+    {Sep 2024 -- Jun 2027}
+    {Chengdu, China}
+    \italicitem{Graduate study in agent systems and machine learning.}
+  \end{subsectionnobullet}
+  \begin{subsectionnobullet}
+    {Ningbo University}
+    {BSc in Information Management and Information Systems, School of Business}
+    {Sep 2020 -- Jun 2024}
+    {Ningbo, China}
+    \italicitem{Information systems, data analysis, and software foundations.}
+  \end{subsectionnobullet}
+\end{section}
+
+\begin{section}{RESEARCH}
+  \begin{subsection}
+    {OWL: Optimized Workforce Learning for General Multi-Agent Assistance}
+    {Researcher, fifth author -- NeurIPS 2025}
+    {Feb 2025 -- Sep 2025}
+    {Remote}
+    \item Co-developed Workforce, a hierarchical multi-agent architecture that separates domain-agnostic planning, subtask coordination, and specialized tool-using workers.
+    \item Reported 69.70\% on GAIA and 52.73\% for the OWL-trained 32B planner; the paper was accepted at NeurIPS 2025.
+    \item \href{https://arxiv.org/abs/2505.23885}{Paper} \textbar{} \href{https://github.com/camel-ai/owl}{Code}
+  \end{subsection}
+
+  \begin{subsection}
+    {Structured Matrices for Long-Sequence Time-Series Forecasting}
+    {Researcher, fourth author -- Neurocomputing 2025}
+    {Jan 2024 -- Apr 2025}
+    {Chengdu, China}
+    \item Introduced structured surrogate attention and feed-forward blocks that retain expressive power while reducing time, space, and parameter costs.
+    \item Experiments over ten Transformer-based models reported a 12.4\% average performance gain and 61.3\% parameter reduction.
+    \item \href{https://arxiv.org/abs/2405.12462}{Paper} \textbar{} \href{https://doi.org/10.1016/j.neucom.2025.129429}{DOI}
+  \end{subsection}
+\end{section}
+
+\begin{section}{SELECTED SYSTEMS \& OPEN SOURCE}
+  \begin{subsection}
+    {Tool-Genesis}
+    {Maintainer}
+    {2026 -- Present}
+    {Open source}
+    \item Developing a benchmark for latent contract recovery in MCP tool creation, spanning 86 server specifications, 24 domains, and 508 ground-truth tools.
+    \item Built a four-level diagnostic evaluation from surface compliance and schema fidelity to held-out functional tests and downstream task utility.
+    \item Published 9,441 held-out tests and a compact public dataset for reproducible evaluation. \href{https://github.com/subway-jack/Tool-Genesis}{Repository}
+  \end{subsection}
+
+  \begin{subsection}
+    {Agent Infrastructure Contributions}
+    {Open-source contributor}
+    {2025 -- Present}
+    {Remote}
+    \item Added asynchronous execution support to CAMEL-AI's BrowserToolkit in merged pull request \href{https://github.com/camel-ai/camel/pull/1886}{\#1886}.
+    \item Delivered 21 merged pull requests to \href{https://github.com/conpera/conpera-town/pulls?q=is%3Apr+author%3Asubway-jack+is%3Amerged}{Conpera Town}, covering economy systems, persistent interiors, map tooling, furniture APIs, and Tiled integration.
+  \end{subsection}
+\end{section}
+
+\sectiontable{HONORS \& AWARDS}{
+  \entry{Gold Award}{Provincial E-Commerce Innovation, Creativity and Entrepreneurship Challenge \hfill \textit{2023}}
+  \entry{Honorable Mention}{Mathematical Contest in Modeling \hfill \textit{2023}}
+  \entry{Second Prize}{China Undergraduate Mathematical Contest in Modeling \hfill \textit{2022}}
+}
+
+\end{document}

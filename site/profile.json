@@ -1,0 +1,193 @@
+{
+  "awards": [
+    {
+      "awarder": "Provincial E-Commerce Innovation, Creativity and Entrepreneurship Challenge",
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ],
+      "title": "Gold Award",
+      "year": 2023
+    },
+    {
+      "awarder": "Mathematical Contest in Modeling",
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ],
+      "title": "Honorable Mention",
+      "year": 2023
+    },
+    {
+      "awarder": "China Undergraduate Mathematical Contest in Modeling",
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ],
+      "title": "Second Prize",
+      "year": 2022
+    }
+  ],
+  "contributions": [
+    {
+      "evidence": [
+        "https://github.com/camel-ai/camel/pull/1886"
+      ],
+      "project": "CAMEL-AI",
+      "status": "merged",
+      "summary": "Added asynchronous execution support to BrowserToolkit.",
+      "url": "https://github.com/camel-ai/camel/pull/1886"
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc in Computer Science",
+      "end": "2027-06",
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ],
+      "institution": "University of Electronic Science and Technology of China",
+      "start": "2024-09",
+      "status": "in_progress",
+      "unit": "Laboratory of Intelligent Collaborative Computing"
+    },
+    {
+      "degree": "BSc in Information Management and Information Systems",
+      "end": "2024-06",
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ],
+      "institution": "Ningbo University",
+      "start": "2020-09",
+      "status": "completed",
+      "unit": "School of Business"
+    }
+  ],
+  "focus": [
+    "Language agents",
+    "Multi-agent systems",
+    "Agent evaluation",
+    "Open-source AI infrastructure"
+  ],
+  "last_verified": "2026-07-10",
+  "person": {
+    "email": "xiabowei350@gmail.com",
+    "github": "https://github.com/subway-jack",
+    "headline": "Research engineer working on language agents, multi-agent systems, and evaluation",
+    "name": "Bowei Xia",
+    "name_zh": "夏博威",
+    "pronouns": "he/him",
+    "summary": "Computer science graduate researcher building agent systems, evaluation benchmarks, and practical open-source infrastructure.",
+    "website": "https://subway-jack.github.io/resume/"
+  },
+  "privacy": {
+    "excluded": [
+      "phone number",
+      "street address",
+      "government identifiers",
+      "private repositories",
+      "third-party personal information"
+    ],
+    "policy": "Only first-party public information with explicit evidence is included."
+  },
+  "projects": [
+    {
+      "evidence": [
+        "https://github.com/subway-jack/Tool-Genesis#readme"
+      ],
+      "highlights": [
+        "86 server specifications across 24 domains",
+        "508 ground-truth tools and 9,441 held-out tests",
+        "Four-level diagnostic evaluation from surface compliance to task utility"
+      ],
+      "name": "Tool-Genesis",
+      "role": "Maintainer",
+      "summary": "A benchmark for evaluating whether language models can recover latent contracts and create functional MCP tools from incomplete requirements.",
+      "technologies": [
+        "Python",
+        "MCP",
+        "LLM evaluation"
+      ],
+      "url": "https://github.com/subway-jack/Tool-Genesis",
+      "year": 2026
+    },
+    {
+      "evidence": [
+        "https://github.com/subway-jack/notion-mcp-bridge#readme"
+      ],
+      "name": "notion-mcp-bridge",
+      "role": "Creator",
+      "summary": "A persistent stdio bridge that keeps Notion MCP OAuth credentials in macOS Keychain for local coding agents.",
+      "technologies": [
+        "Python",
+        "MCP",
+        "OAuth",
+        "macOS Keychain"
+      ],
+      "url": "https://github.com/subway-jack/notion-mcp-bridge",
+      "year": 2026
+    },
+    {
+      "evidence": [
+        "https://github.com/conpera/conpera-town/pull/1",
+        "https://github.com/conpera/conpera-town/pull/8",
+        "https://github.com/conpera/conpera-town/pull/14",
+        "https://github.com/conpera/conpera-town/pull/20",
+        "https://github.com/conpera/conpera-town/pull/21"
+      ],
+      "highlights": [
+        "21 merged public pull requests"
+      ],
+      "name": "Conpera Town",
+      "role": "Open-source contributor",
+      "summary": "Implemented economy, building interiors, scene persistence, furniture APIs, map tooling, and Tiled integration for an AI town starter kit.",
+      "technologies": [
+        "TypeScript",
+        "Convex",
+        "Tiled",
+        "Agent systems"
+      ],
+      "url": "https://github.com/conpera/conpera-town/pulls?q=is%3Apr+author%3Asubway-jack+is%3Amerged",
+      "year": 2026
+    }
+  ],
+  "publications": [
+    {
+      "evidence": [
+        "https://arxiv.org/abs/2505.23885",
+        "https://github.com/camel-ai/owl#readme"
+      ],
+      "highlights": [
+        "69.70% on GAIA, reported as open-source state of the art",
+        "52.73% for the OWL-trained 32B planner"
+      ],
+      "links": {
+        "code": "https://github.com/camel-ai/owl",
+        "paper": "https://arxiv.org/abs/2505.23885"
+      },
+      "role": "Fifth author",
+      "summary": "A hierarchical multi-agent framework that separates planning, coordination, and specialized execution, with reinforcement learning for cross-domain planner generalization.",
+      "title": "OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation",
+      "venue": "NeurIPS 2025",
+      "year": 2025
+    },
+    {
+      "evidence": [
+        "https://arxiv.org/abs/2405.12462",
+        "https://doi.org/10.1016/j.neucom.2025.129429"
+      ],
+      "highlights": [
+        "12.4% average performance improvement across reported experiments",
+        "61.3% average parameter reduction"
+      ],
+      "links": {
+        "doi": "https://doi.org/10.1016/j.neucom.2025.129429",
+        "paper": "https://arxiv.org/abs/2405.12462"
+      },
+      "role": "Fourth author",
+      "summary": "Structured surrogate attention and feed-forward blocks for improving efficiency while retaining expressive power in long-sequence forecasting.",
+      "title": "Enhancing Transformer-based Models for Long Sequence Time Series Forecasting via Structured Matrix",
+      "venue": "Neurocomputing",
+      "year": 2025
+    }
+  ],
+  "schema_version": 1,
+  "visibility": "public"
+}

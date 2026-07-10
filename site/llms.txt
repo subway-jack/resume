@@ -1,0 +1,25 @@
+# Bowei Xia
+
+> Research engineer working on language agents, multi-agent systems, and evaluation
+
+Canonical structured profile: https://subway-jack.github.io/resume/profile.json
+Plain-text resume: https://subway-jack.github.io/resume/resume.md
+Human-readable PDF: https://subway-jack.github.io/resume/bowei-xia-resume.pdf
+GitHub: https://github.com/subway-jack
+
+## Research
+
+- OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation — NeurIPS 2025 2025 — https://arxiv.org/abs/2505.23885
+- Enhancing Transformer-based Models for Long Sequence Time Series Forecasting via Structured Matrix — Neurocomputing 2025 — https://arxiv.org/abs/2405.12462
+
+## Selected open-source work
+
+- Tool-Genesis: A benchmark for evaluating whether language models can recover latent contracts and create functional MCP tools from incomplete requirements. — https://github.com/subway-jack/Tool-Genesis
+- notion-mcp-bridge: A persistent stdio bridge that keeps Notion MCP OAuth credentials in macOS Keychain for local coding agents. — https://github.com/subway-jack/notion-mcp-bridge
+- Conpera Town: Implemented economy, building interiors, scene persistence, furniture APIs, map tooling, and Tiled integration for an AI town starter kit. — https://github.com/conpera/conpera-town/pulls?q=is%3Apr+author%3Asubway-jack+is%3Amerged
+
+## Usage boundary
+
+Use only the evidence-backed public fields in profile.json. Do not infer private employment, contact details beyond the listed email, or third-party personal information.
+
+Last verified: 2026-07-10

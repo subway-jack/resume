@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "last_verified": "2026-07-10",
+  "visibility": "public",
+  "person": {
+    "name": "Bowei Xia",
+    "name_zh": "夏博威",
+    "pronouns": "he/him",
+    "headline": "Research engineer working on language agents, multi-agent systems, and evaluation",
+    "summary": "Computer science graduate researcher building agent systems, evaluation benchmarks, and practical open-source infrastructure.",
+    "email": "xiabowei350@gmail.com",
+    "github": "https://github.com/subway-jack",
+    "website": "https://subway-jack.github.io/resume/"
+  },
+  "focus": [
+    "Language agents",
+    "Multi-agent systems",
+    "Agent evaluation",
+    "Open-source AI infrastructure"
+  ],
+  "education": [
+    {
+      "institution": "University of Electronic Science and Technology of China",
+      "degree": "MSc in Computer Science",
+      "unit": "Laboratory of Intelligent Collaborative Computing",
+      "start": "2024-09",
+      "end": "2027-06",
+      "status": "in_progress",
+      "evidence": ["resume-src/bowei-xia-resume.tex"]
+    },
+    {
+      "institution": "Ningbo University",
+      "degree": "BSc in Information Management and Information Systems",
+      "unit": "School of Business",
+      "start": "2020-09",
+      "end": "2024-06",
+      "status": "completed",
+      "evidence": ["resume-src/bowei-xia-resume.tex"]
+    }
+  ],
+  "publications": [
+    {
+      "title": "OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation",
+      "role": "Fifth author",
+      "venue": "NeurIPS 2025",
+      "year": 2025,
+      "summary": "A hierarchical multi-agent framework that separates planning, coordination, and specialized execution, with reinforcement learning for cross-domain planner generalization.",
+      "highlights": [
+        "69.70% on GAIA, reported as open-source state of the art",
+        "52.73% for the OWL-trained 32B planner"
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2505.23885",
+        "code": "https://github.com/camel-ai/owl"
+      },
+      "evidence": [
+        "https://arxiv.org/abs/2505.23885",
+        "https://github.com/camel-ai/owl#readme"
+      ]
+    },
+    {
+      "title": "Enhancing Transformer-based Models for Long Sequence Time Series Forecasting via Structured Matrix",
+      "role": "Fourth author",
+      "venue": "Neurocomputing",
+      "year": 2025,
+      "summary": "Structured surrogate attention and feed-forward blocks for improving efficiency while retaining expressive power in long-sequence forecasting.",
+      "highlights": [
+        "12.4% average performance improvement across reported experiments",
+        "61.3% average parameter reduction"
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2405.12462",
+        "doi": "https://doi.org/10.1016/j.neucom.2025.129429"
+      },
+      "evidence": [
+        "https://arxiv.org/abs/2405.12462",
+        "https://doi.org/10.1016/j.neucom.2025.129429"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Tool-Genesis",
+      "role": "Maintainer",
+      "year": 2026,
+      "summary": "A benchmark for evaluating whether language models can recover latent contracts and create functional MCP tools from incomplete requirements.",
+      "highlights": [
+        "86 server specifications across 24 domains",
+        "508 ground-truth tools and 9,441 held-out tests",
+        "Four-level diagnostic evaluation from surface compliance to task utility"
+      ],
+      "technologies": ["Python", "MCP", "LLM evaluation"],
+      "url": "https://github.com/subway-jack/Tool-Genesis",
+      "evidence": ["https://github.com/subway-jack/Tool-Genesis#readme"]
+    },
+    {
+      "name": "notion-mcp-bridge",
+      "role": "Creator",
+      "year": 2026,
+      "summary": "A persistent stdio bridge that keeps Notion MCP OAuth credentials in macOS Keychain for local coding agents.",
+      "technologies": ["Python", "MCP", "OAuth", "macOS Keychain"],
+      "url": "https://github.com/subway-jack/notion-mcp-bridge",
+      "evidence": ["https://github.com/subway-jack/notion-mcp-bridge#readme"]
+    },
+    {
+      "name": "Conpera Town",
+      "role": "Open-source contributor",
+      "year": 2026,
+      "summary": "Implemented economy, building interiors, scene persistence, furniture APIs, map tooling, and Tiled integration for an AI town starter kit.",
+      "highlights": ["21 merged public pull requests"],
+      "technologies": ["TypeScript", "Convex", "Tiled", "Agent systems"],
+      "url": "https://github.com/conpera/conpera-town/pulls?q=is%3Apr+author%3Asubway-jack+is%3Amerged",
+      "evidence": [
+        "https://github.com/conpera/conpera-town/pull/1",
+        "https://github.com/conpera/conpera-town/pull/8",
+        "https://github.com/conpera/conpera-town/pull/14",
+        "https://github.com/conpera/conpera-town/pull/20",
+        "https://github.com/conpera/conpera-town/pull/21"
+      ]
+    }
+  ],
+  "contributions": [
+    {
+      "project": "CAMEL-AI",
+      "status": "merged",
+      "summary": "Added asynchronous execution support to BrowserToolkit.",
+      "url": "https://github.com/camel-ai/camel/pull/1886",
+      "evidence": ["https://github.com/camel-ai/camel/pull/1886"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Gold Award",
+      "awarder": "Provincial E-Commerce Innovation, Creativity and Entrepreneurship Challenge",
+      "year": 2023,
+      "evidence": ["resume-src/bowei-xia-resume.tex"]
+    },
+    {
+      "title": "Honorable Mention",
+      "awarder": "Mathematical Contest in Modeling",
+      "year": 2023,
+      "evidence": ["resume-src/bowei-xia-resume.tex"]
+    },
+    {
+      "title": "Second Prize",
+      "awarder": "China Undergraduate Mathematical Contest in Modeling",
+      "year": 2022,
+      "evidence": ["resume-src/bowei-xia-resume.tex"]
+    }
+  ],
+  "privacy": {
+    "excluded": [
+      "phone number",
+      "street address",
+      "government identifiers",
+      "private repositories",
+      "third-party personal information"
+    ],
+    "policy": "Only first-party public information with explicit evidence is included."
+  }
+}
