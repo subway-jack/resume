@@ -6,6 +6,8 @@
     "name": "Bowei Xia",
     "name_zh": "夏博威",
     "pronouns": "he/him",
+    "status": "MSc student in Computer Science at UESTC",
+    "bio": "I work on language agents, multi-agent systems, and agent evaluation.",
     "headline": "Research engineer working on language agents, multi-agent systems, and evaluation",
     "summary": "Computer science graduate researcher building agent systems, evaluation benchmarks, and practical open-source infrastructure.",
     "email": "xiabowei350@gmail.com",

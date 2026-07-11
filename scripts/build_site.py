@@ -59,33 +59,28 @@ def external_link(url: str, label: str, class_name: str = "text-link") -> str:
         raise BuildError("public_link_must_use_https")
     return (
         f'<a class="{esc(class_name)}" href="{esc(url)}" '
-        f'target="_blank" rel="noreferrer">{esc(label)} <span aria-hidden="true">↗</span></a>'
+        f'target="_blank" rel="noreferrer">{esc(label)}</a>'
     )
 
 
 def render_publications(profile: dict[str, Any]) -> str:
     items = []
-    for index, publication in enumerate(profile["publications"], start=1):
+    for publication in profile["publications"]:
         if not publication.get("evidence"):
             raise BuildError("publication_missing_evidence")
         links = "".join(
-            external_link(url, label.title(), "evidence-link")
+            external_link(url, label.title(), "work-link")
             for label, url in publication.get("links", {}).items()
-        )
-        highlights = "".join(
-            f"<li>{esc(item)}</li>" for item in publication.get("highlights", [])
         )
         items.append(
             f"""
-            <article class="evidence-item publication-item">
-              <div class="evidence-index">0{index}</div>
-              <div class="evidence-main">
-                <div class="evidence-kicker"><span>{esc(publication['venue'])}</span><span>{esc(publication['year'])}</span></div>
+            <article class="work-row">
+              <div class="work-year">{esc(publication['year'])}</div>
+              <div class="work-body">
                 <h3>{esc(publication['title'])}</h3>
-                <p class="evidence-role">{esc(publication['role'])}</p>
-                <p>{esc(publication['summary'])}</p>
-                <ul class="metric-list">{highlights}</ul>
-                <div class="evidence-links">{links}</div>
+                <p class="work-meta">{esc(publication['venue'])}</p>
+                <p class="work-summary">{esc(publication['summary'])}</p>
+                <div class="work-links">{links}</div>
               </div>
             </article>
             """
@@ -98,20 +93,15 @@ def render_projects(profile: dict[str, Any]) -> str:
     for project in profile["projects"]:
         if not project.get("evidence"):
             raise BuildError("project_missing_evidence")
-        technologies = "".join(
-            f"<li>{esc(item)}</li>" for item in project.get("technologies", [])
-        )
-        highlights = "".join(
-            f"<li>{esc(item)}</li>" for item in project.get("highlights", [])
-        )
         items.append(
             f"""
-            <article class="project-item">
-              <div class="project-meta"><span>{esc(project['role'])}</span><span>{esc(project['year'])}</span></div>
-              <h3>{external_link(project['url'], project['name'], 'project-title')}</h3>
-              <p>{esc(project['summary'])}</p>
-              {f'<ul class="project-highlights">{highlights}</ul>' if highlights else ''}
-              <ul class="tech-list">{technologies}</ul>
+            <article class="work-row">
+              <div class="work-year">{esc(project['year'])}</div>
+              <div class="work-body">
+                <h3>{external_link(project['url'], project['name'], 'project-title')}</h3>
+                <p class="work-meta">{esc(project['role'])}</p>
+                <p class="work-summary">{esc(project['summary'])}</p>
+              </div>
             </article>
             """
         )
@@ -126,10 +116,11 @@ def render_contributions(profile: dict[str, Any]) -> str:
         rows.append(
             f"""
             <div class="contribution-row">
-              <strong>{esc(contribution['project'])}</strong>
-              <span>{esc(contribution['summary'])}</span>
-              <span class="status-mark">{esc(contribution['status'])}</span>
-              {external_link(contribution['url'], 'PR', 'compact-link')}
+              <span class="contribution-label">Contribution</span>
+              <div>
+                <strong>{external_link(contribution['url'], contribution['project'], 'work-link')}</strong>
+                <p>{esc(contribution['summary'])} <span class="status-mark">{esc(contribution['status'])}</span></p>
+              </div>
             </div>
             """
         )
@@ -142,7 +133,7 @@ def render_education(profile: dict[str, Any]) -> str:
         rows.append(
             f"""
             <article class="timeline-row">
-              <div class="timeline-date">{esc(item['start'])}<br>{esc(item['end'])}</div>
+              <div class="timeline-date">{esc(item['start'])}–{esc(item['end'])}</div>
               <div>
                 <h3>{esc(item['institution'])}</h3>
                 <p>{esc(item['degree'])}</p>
@@ -167,10 +158,6 @@ def render_awards(profile: dict[str, Any]) -> str:
     )
 
 
-def render_focus(profile: dict[str, Any]) -> str:
-    return "".join(f"<li>{esc(item)}</li>" for item in profile.get("focus", []))
-
-
 def json_ld(profile: dict[str, Any]) -> str:
     person = profile["person"]
     payload = {
@@ -178,6 +165,7 @@ def json_ld(profile: dict[str, Any]) -> str:
         "@type": "Person",
         "name": person["name"],
         "alternateName": person.get("name_zh"),
+        "jobTitle": person.get("status"),
         "url": person["website"],
         "image": f"{PUBLIC_BASE}assets/bowei-xia.jpg",
         "email": f"mailto:{person['email']}",
@@ -204,12 +192,12 @@ def render_index(profile: dict[str, Any]) -> str:
     replacements = {
         "@@NAME@@": esc(person["name"]),
         "@@NAME_ZH@@": esc(person.get("name_zh", "")),
-        "@@HEADLINE@@": esc(person["headline"]),
+        "@@STATUS@@": esc(person["status"]),
+        "@@BIO@@": esc(person["bio"]),
         "@@SUMMARY@@": esc(person["summary"]),
         "@@EMAIL@@": esc(person["email"]),
         "@@GITHUB@@": esc(person["github"]),
         "@@LAST_VERIFIED@@": esc(profile["last_verified"]),
-        "@@FOCUS@@": render_focus(profile),
         "@@PUBLICATIONS@@": render_publications(profile),
         "@@PROJECTS@@": render_projects(profile),
         "@@CONTRIBUTIONS@@": render_contributions(profile),
