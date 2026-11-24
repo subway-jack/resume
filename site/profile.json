@@ -71,6 +71,30 @@
       "start": "2026-07",
       "summary": "Build pipelines that turn real open-source repositories into executable software-engineering tasks, covering reproducible Docker environments, agent-based requirement discovery, and test-based task validation in isolated environments.",
       "team": "Research Data"
+    },
+    {
+      "end": "2026-02",
+      "evidence": [
+        "https://arxiv.org/abs/2603.05578",
+        "https://arxiv.org/abs/2512.22336"
+      ],
+      "organization": "The University of Hong Kong",
+      "role": "Research Intern (remote)",
+      "start": "2025-06",
+      "summary": "Co-first author and maintainer of Tool-Genesis, a diagnostic benchmark for building MCP tools from requirements; second author of Agent2World, building research, development, and testing agents that generate executable world models.",
+      "team": "Prof. Ping Luo's group"
+    },
+    {
+      "end": "2025-05",
+      "evidence": [
+        "https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html",
+        "https://github.com/camel-ai/camel/pull/1886"
+      ],
+      "organization": "CAMEL-AI",
+      "role": "Research Intern (remote)",
+      "start": "2025-02",
+      "summary": "Co-developed Workforce, the hierarchical planner, coordinator, and worker architecture behind OWL (NeurIPS 2025), and added asynchronous execution to CAMEL's BrowserToolkit.",
+      "team": "OWL / Workforce"
     }
   ],
   "focus": [
@@ -81,7 +105,7 @@
   ],
   "last_verified": "2026-11-24",
   "person": {
-    "bio": "I work on language agents, multi-agent systems, and agent evaluation, and currently build software-engineering task pipelines as a research data intern.",
+    "bio": "I work on language agents, multi-agent systems, and agent evaluation. Previously a research intern at CAMEL-AI and the University of Hong Kong; now building software-engineering task pipelines as a research data intern.",
     "email": "xiabowei350@gmail.com",
     "github": "https://github.com/subway-jack",
     "headline": "Research engineer working on language agents, multi-agent systems, and evaluation",
@@ -159,7 +183,7 @@
         "paper": "https://arxiv.org/abs/2603.05578",
         "project": "https://tool-genesis.github.io/"
       },
-      "role": "First author and maintainer",
+      "role": "Co-first author and maintainer",
       "summary": "A diagnostic benchmark for whether agents can build task-relevant MCP tools from abstract requirements alone, scored from interface compliance and functional correctness to downstream utility.",
       "title": "Tool-Genesis: A Task-Driven Tool Creation Benchmark for Self-Evolving Language Agent",
       "venue": "arXiv preprint",

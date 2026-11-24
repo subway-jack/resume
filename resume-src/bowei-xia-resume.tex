@@ -1,8 +1,26 @@
-\documentclass[]{kyvernitis-resume}
+% Public CV for subway-jack.github.io/resume. Same content and layout as the private English resume;
+% internal notes are not copied into this public repository. Build with `make resume`.
+\documentclass{kyvernitis-resume}
 \usepackage{enumitem}
-
+\setsansfont{SourceSansPro}[Extension=.otf,UprightFont=*-Regular,BoldFont=*-Semibold,ItalicFont=*-RegularIt,BoldItalicFont=*-SemiboldIt]
+\renewcommand*{\familydefault}{\sfdefault}
+\makeatletter\def\mdseries@sf{m}\makeatother
+\hypersetup{
+  pdftitle={Bowei Xia - Agent and AI Research Engineering},
+  pdfauthor={Bowei Xia},
+  pdfsubject={Research and engineering experience in agents, world models, and evaluation}
+}
 \fullname{Bowei Xia}
 \jobtitle{Language Agents \& Multi-Agent Systems}
+
+\newcommand{\eduentry}[3]{%
+  \textbf{#1}\quad #2 \hfill \textit{#3}\par\smallskip}
+\newcommand{\lead}[1]{\item[]\hspace{-2em}#1}
+\newcommand{\paperrow}[4]{\href{#2}{\textcolor{black}{#1}} & \textit{#3, #4}\\}
+\newenvironment{paperlist}{%
+  \fontsize{8.8}{13}\selectfont\noindent
+  \tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{1.5mm}}r@{}}}{%
+  \endtabularx\par}
 
 \begin{document}
 
@@ -10,92 +28,73 @@
 {\email{xiabowei350@gmail.com}}
 {\github{subway-jack}}
 {}
-{\href{https://subway-jack.github.io/resume/}{\textcolor{black}{\faGlobeAmericas}\hspace{0.5em}Portfolio}}
+{\website{subway-jack.github.io/resume}}
 {}
 {}
 
 \begin{section}{EDUCATION}
-  \begin{subsectionnobullet}
-    {University of Electronic Science and Technology of China}
-    {MSc in Computer Science, Laboratory of Intelligent Collaborative Computing}
-    {Sep 2024 -- Jun 2027}
-    {Chengdu, China}
-    \italicitem{Graduate study in agent systems and machine learning.}
-  \end{subsectionnobullet}
-  \begin{subsectionnobullet}
-    {Ningbo University}
-    {BSc in Information Management and Information Systems, School of Business}
-    {Sep 2020 -- Jun 2024}
-    {Ningbo, China}
-    \italicitem{Information systems, data analysis, and software foundations.}
-  \end{subsectionnobullet}
+  \eduentry{University of Electronic Science and Technology of China}{MSc, Computer Science}{2024 -- 2027}
+  \eduentry{Ningbo University}{BMgt, Information Management and Information Systems}{2020 -- 2024}
+  \textbf{Research focus:} LLM agents, tool creation, executable world models, and agent evaluation.
 \end{section}
 
-% Public variant: internship work is described generically (no internal project names or figures).
-\begin{section}{EXPERIENCE}
+\begin{section}{INTERNSHIP EXPERIENCE}
   \begin{subsection}
     {Evolvent AI}
-    {Data Processing Intern, Research Data}
+    {Data Processing Intern \textbar{} Research Data}
     {Jul 2026 -- Present}
-    {Hangzhou, China}
-    \item Build pipelines that turn real open-source repositories into executable software-engineering tasks.
-    \item Pin repository revisions and auto-build Docker environments, validated by each repository's own tests.
-    \item Designed agent-based requirement discovery that turns user workflows into cross-module tasks.
-    \item Validate tasks with hidden tests, baseline regressions, reference/no-change controls, and solver runs.
-  \end{subsection}
-\end{section}
-
-\begin{section}{RESEARCH}
-  \begin{subsection}
-    {Tool-Genesis: A Task-Driven Tool Creation Benchmark for Self-Evolving Language Agent}
-    {First author and maintainer -- arXiv 2026}
-    {2026}
-    {Chengdu, China}
-    \item Built 86 MCP server specs across 24 domains, with 508 reference tools and 9,441 held-out tests.
-    \item Implemented four evaluation levels, from server startup to downstream utility. \href{https://arxiv.org/abs/2603.05578}{Paper} \textbar{} \href{https://github.com/subway-jack/Tool-Genesis}{Code} \textbar{} \href{https://tool-genesis.github.io/}{Project}
-  \end{subsection}
-
-  \begin{subsection}
-    {Agent2World: Learning to Generate Symbolic World Models}
-    {Second author -- arXiv 2025}
-    {2025 -- 2026}
     {}
-    \item Built research, development, and testing agents that generate PDDL domains and simulators.
-    \item Integrated unit tests, simulation feedback, and repair on Text2World, CWMB, and ByteSized32. \href{https://arxiv.org/abs/2512.22336}{Paper}
+    \lead{\textbf{Project:} Software-Engineering Task Production Pipeline}
+    \item Built an end-to-end pipeline turning real open-source repositories into executable multi-language tasks.
+    \item Pinned revisions and auto-built Docker environments, validated by each repository's own tests.
+    \item Designed multi-model requirement discovery: agents read code from several perspectives, map user workflows, and propose missing features, then screen and clarify them into cross-module tasks.
+    \item Validated each task with hidden behavioral tests, baseline regressions, reference/no-change controls, and three independent solver runs in isolated E2B environments.
   \end{subsection}
 
   \begin{subsection}
-    {OWL: Optimized Workforce Learning for General Multi-Agent Assistance}
-    {Sixth author -- NeurIPS 2025}
-    {Feb 2025 -- Sep 2025}
-    {Remote}
-    \item Co-developed the Workforce architecture: 69.70\% on GAIA, 52.73\% for the 32B planner. \href{https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html}{Paper} \textbar{} \href{https://github.com/camel-ai/owl}{Code}
+    {The University of Hong Kong --- Prof.\ Ping Luo's Group}
+    {Research Intern (remote)}
+    {Jun 2025 -- Feb 2026}
+    {}
+    \lead{\textbf{\href{https://arxiv.org/abs/2603.05578}{Tool-Genesis}} --- tool-creation benchmark \textit{(co-first author, maintainer)}}
+    \item Built 86 MCP server specs across 24 domains, with 508 reference tools and 9,441 held-out tests.
+    \item Implemented four evaluation levels: startup, schema fidelity, functional correctness, and task utility.
+    \item Found that leading models miss precise interfaces and logic in one shot; early flaws compound downstream.
+    \lead{\textbf{\href{https://arxiv.org/abs/2512.22336}{Agent2World}} --- executable world-model generation \textit{(second author)}}
+    \item Built research, development, and testing agents that generate PDDL domains and Python simulators.
+    \item State of the art on all three benchmarks; fine-tuning on its feedback trajectories adds 30.95\% (avg.\ relative).
   \end{subsection}
 
   \begin{subsection}
-    {Structured Matrices for Long-Sequence Time-Series Forecasting}
-    {Fourth author -- Neurocomputing 2025}
-    {Jan 2024 -- Apr 2025}
-    {Chengdu, China}
-    \item Structured attention and feed-forward blocks: 12.4\% gain, 61.3\% fewer parameters. \href{https://arxiv.org/abs/2405.12462}{Paper} \textbar{} \href{https://doi.org/10.1016/j.neucom.2025.129429}{DOI}
+    {CAMEL-AI}
+    {Research Intern (remote)}
+    {Feb 2025 -- May 2025}
+    {}
+    \lead{\textbf{\href{https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html}{OWL}} --- general multi-agent task automation \textit{(NeurIPS 2025, sixth author)}}
+    \item Co-developed Workforce, a hierarchical architecture of planner, coordinator, and tool-using workers.
+    \item Workforce reaches 69.70\% on GAIA; the OWL-trained 32B planner reaches 52.73\%.
+    \item Added asynchronous execution to CAMEL's BrowserToolkit (\href{https://github.com/camel-ai/camel/pull/1886}{PR \#1886, merged}).
   \end{subsection}
 \end{section}
 
-\begin{section}{SELECTED SYSTEMS \& OPEN SOURCE}
-  \begin{subsection}
-    {Agent Infrastructure Contributions}
-    {Open-source contributor}
-    {2025 -- Present}
-    {Remote}
-    \item Added asynchronous execution support to CAMEL-AI's BrowserToolkit in merged pull request \href{https://github.com/camel-ai/camel/pull/1886}{\#1886}.
-    \item Delivered 21 merged pull requests to \href{https://github.com/conpera/conpera-town/pulls?q=is%3Apr+author%3Asubway-jack+is%3Amerged}{Conpera Town}: economy, interiors, maps, and Tiled.
-  \end{subsection}
+\begin{section}{PUBLICATIONS}
+  \begin{paperlist}
+  \paperrow{Tool-Genesis: A Task-Driven Tool Creation Benchmark for Self-Evolving Language Agent}{https://arxiv.org/abs/2603.05578}{arXiv 2026}{co-first author}
+  \paperrow{Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi-Agent Feedback}{https://arxiv.org/abs/2512.22336}{arXiv 2025}{second author}
+  \paperrow{OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation}{https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html}{NeurIPS 2025}{sixth author}
+  \paperrow{Enhancing Transformer-based Models for Long Sequence Time Series Forecasting via Structured Matrix}{https://doi.org/10.1016/j.neucom.2025.129429}{Neurocomputing 2025}{fourth author}
+  \end{paperlist}
 \end{section}
 
-\sectiontable{HONORS \& AWARDS}{
-  \entry{First Prize}{18th Zhejiang College Students' E-Commerce Competition \hfill \textit{2023}}
-  \entry{Honorable Mention}{Mathematical Contest in Modeling \hfill \textit{2023}}
-  \entry{Second Prize}{China Undergraduate Mathematical Contest in Modeling (Zhejiang) \hfill \textit{2022}}
+\begin{section}{SKILLS AND OPEN SOURCE}
+  \textbf{Languages:} Python, TypeScript \enspace\textbar\enspace \textbf{Systems:} MCP, asynchronous execution, E2B, Docker\\
+  \textbf{Evaluation:} behavioral testing, benchmark construction, task provenance, agent evaluation\\
+  \textbf{Open source:} 21 merged PRs to \href{https://github.com/conpera/conpera-town/pulls?q=is\%3Apr+author\%3Asubway-jack+is\%3Amerged}{Conpera Town} (economy, interiors, map tooling, Tiled).
+\end{section}
+
+\sectiontable{HONORS AND AWARDS}{
+  \entry{First Prize}{Zhejiang College Students' E-Commerce Competition \hfill 2023}
+  \entry{Honorable Mention}{Mathematical Contest in Modeling (MCM) \hfill 2023}
+  \entry{Second Prize}{China Undergraduate Mathematical Contest in Modeling, Zhejiang \hfill 2022}
 }
-
 \end{document}

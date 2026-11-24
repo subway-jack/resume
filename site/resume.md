@@ -17,11 +17,19 @@ Research engineer working on language agents, multi-agent systems, and evaluatio
 Data Processing Intern · Research Data · 2026-07–Present
 
 Build pipelines that turn real open-source repositories into executable software-engineering tasks, covering reproducible Docker environments, agent-based requirement discovery, and test-based task validation in isolated environments.
+### The University of Hong Kong
+Research Intern (remote) · Prof. Ping Luo's group · 2025-06–2026-02
+
+Co-first author and maintainer of Tool-Genesis, a diagnostic benchmark for building MCP tools from requirements; second author of Agent2World, building research, development, and testing agents that generate executable world models.
+### CAMEL-AI
+Research Intern (remote) · OWL / Workforce · 2025-02–2025-05
+
+Co-developed Workforce, the hierarchical planner, coordinator, and worker architecture behind OWL (NeurIPS 2025), and added asynchronous execution to CAMEL's BrowserToolkit.
 
 ## Publications
 
 ### Tool-Genesis: A Task-Driven Tool Creation Benchmark for Self-Evolving Language Agent
-First author and maintainer · arXiv preprint (2026)
+Co-first author and maintainer · arXiv preprint (2026)
 
 A diagnostic benchmark for whether agents can build task-relevant MCP tools from abstract requirements alone, scored from interface compliance and functional correctness to downstream utility.
 
