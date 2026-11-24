@@ -7,19 +7,24 @@ Plain-text resume: https://subway-jack.github.io/resume/resume.md
 Human-readable PDF: https://subway-jack.github.io/resume/bowei-xia-resume.pdf
 GitHub: https://github.com/subway-jack
 
+## Experience
+
+- Evolvent AI — Data Processing Intern, Research Data (2026-07–Present)
+
 ## Research
 
-- OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation — NeurIPS 2025 2025 — https://arxiv.org/abs/2505.23885
+- Tool-Genesis: A Task-Driven Tool Creation Benchmark for Self-Evolving Language Agent — arXiv preprint 2026 — https://arxiv.org/abs/2603.05578
+- Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi-Agent Feedback — arXiv preprint 2025 — https://arxiv.org/abs/2512.22336
+- OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation — NeurIPS 2025 2025 — https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html
 - Enhancing Transformer-based Models for Long Sequence Time Series Forecasting via Structured Matrix — Neurocomputing 2025 — https://arxiv.org/abs/2405.12462
 
 ## Selected open-source work
 
-- Tool-Genesis: A benchmark for evaluating whether language models can recover latent contracts and create functional MCP tools from incomplete requirements. — https://github.com/subway-jack/Tool-Genesis
 - notion-mcp-bridge: A persistent stdio bridge that keeps Notion MCP OAuth credentials in macOS Keychain for local coding agents. — https://github.com/subway-jack/notion-mcp-bridge
 - Conpera Town: Implemented economy, building interiors, scene persistence, furniture APIs, map tooling, and Tiled integration for an AI town starter kit. — https://github.com/conpera/conpera-town/pulls?q=is%3Apr+author%3Asubway-jack+is%3Amerged
 
 ## Usage boundary
 
-Use only the evidence-backed public fields in profile.json. Do not infer private employment, contact details beyond the listed email, or third-party personal information.
+Use only the evidence-backed public fields in profile.json. Do not infer employment details beyond the listed experience, contact details beyond the listed email, or third-party personal information.
 
-Last verified: 2026-07-10
+Last verified: 2026-11-24

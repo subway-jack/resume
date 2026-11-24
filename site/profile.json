@@ -1,11 +1,11 @@
 {
   "awards": [
     {
-      "awarder": "Provincial E-Commerce Innovation, Creativity and Entrepreneurship Challenge",
+      "awarder": "18th Zhejiang Provincial College Students' E-Commerce Competition",
       "evidence": [
         "resume-src/bowei-xia-resume.tex"
       ],
-      "title": "Gold Award",
+      "title": "First Prize (Undergraduate)",
       "year": 2023
     },
     {
@@ -21,7 +21,7 @@
       "evidence": [
         "resume-src/bowei-xia-resume.tex"
       ],
-      "title": "Second Prize",
+      "title": "Second Prize (Zhejiang Province)",
       "year": 2022
     }
   ],
@@ -60,15 +60,28 @@
       "unit": "School of Business"
     }
   ],
+  "experience": [
+    {
+      "end": "present",
+      "evidence": [
+        "private record: signed internship agreement (2026-07)"
+      ],
+      "organization": "Evolvent AI",
+      "role": "Data Processing Intern",
+      "start": "2026-07",
+      "summary": "Build pipelines that turn real open-source repositories into executable software-engineering tasks, covering reproducible Docker environments, agent-based requirement discovery, and test-based task validation in isolated environments.",
+      "team": "Research Data"
+    }
+  ],
   "focus": [
     "Language agents",
     "Multi-agent systems",
     "Agent evaluation",
     "Open-source AI infrastructure"
   ],
-  "last_verified": "2026-07-10",
+  "last_verified": "2026-11-24",
   "person": {
-    "bio": "I work on language agents, multi-agent systems, and agent evaluation.",
+    "bio": "I work on language agents, multi-agent systems, and agent evaluation, and currently build software-engineering task pipelines as a research data intern.",
     "email": "xiabowei350@gmail.com",
     "github": "https://github.com/subway-jack",
     "headline": "Research engineer working on language agents, multi-agent systems, and evaluation",
@@ -90,26 +103,6 @@
     "policy": "Only first-party public information with explicit evidence is included."
   },
   "projects": [
-    {
-      "evidence": [
-        "https://github.com/subway-jack/Tool-Genesis#readme"
-      ],
-      "highlights": [
-        "86 server specifications across 24 domains",
-        "508 ground-truth tools and 9,441 held-out tests",
-        "Four-level diagnostic evaluation from surface compliance to task utility"
-      ],
-      "name": "Tool-Genesis",
-      "role": "Maintainer",
-      "summary": "A benchmark for evaluating whether language models can recover latent contracts and create functional MCP tools from incomplete requirements.",
-      "technologies": [
-        "Python",
-        "MCP",
-        "LLM evaluation"
-      ],
-      "url": "https://github.com/subway-jack/Tool-Genesis",
-      "year": 2026
-    },
     {
       "evidence": [
         "https://github.com/subway-jack/notion-mcp-bridge#readme"
@@ -153,7 +146,44 @@
   "publications": [
     {
       "evidence": [
-        "https://arxiv.org/abs/2505.23885",
+        "https://arxiv.org/abs/2603.05578",
+        "https://github.com/subway-jack/Tool-Genesis#readme"
+      ],
+      "highlights": [
+        "86 MCP server specifications across 24 domains",
+        "508 reference tools and 9,441 held-out tests",
+        "Four-level evaluation: server startup, schema fidelity, functional correctness, and downstream task utility"
+      ],
+      "links": {
+        "code": "https://github.com/subway-jack/Tool-Genesis",
+        "paper": "https://arxiv.org/abs/2603.05578",
+        "project": "https://tool-genesis.github.io/"
+      },
+      "role": "First author and maintainer",
+      "summary": "A diagnostic benchmark for whether agents can build task-relevant MCP tools from abstract requirements alone, scored from interface compliance and functional correctness to downstream utility.",
+      "title": "Tool-Genesis: A Task-Driven Tool Creation Benchmark for Self-Evolving Language Agent",
+      "venue": "arXiv preprint",
+      "year": 2026
+    },
+    {
+      "evidence": [
+        "https://arxiv.org/abs/2512.22336"
+      ],
+      "highlights": [
+        "Evaluated on Text2World, CWMB, and ByteSized32"
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2512.22336"
+      },
+      "role": "Second author",
+      "summary": "Research, development, and testing agents turn natural-language environment descriptions into PDDL domains or executable Python simulators, repaired through adaptive unit tests and simulation feedback.",
+      "title": "Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi-Agent Feedback",
+      "venue": "arXiv preprint",
+      "year": 2025
+    },
+    {
+      "evidence": [
+        "https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html",
         "https://github.com/camel-ai/owl#readme"
       ],
       "highlights": [
@@ -162,9 +192,9 @@
       ],
       "links": {
         "code": "https://github.com/camel-ai/owl",
-        "paper": "https://arxiv.org/abs/2505.23885"
+        "paper": "https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html"
       },
-      "role": "Fifth author",
+      "role": "Sixth author",
       "summary": "A hierarchical multi-agent framework that separates planning, coordination, and specialized execution, with reinforcement learning for cross-domain planner generalization.",
       "title": "OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation",
       "venue": "NeurIPS 2025",

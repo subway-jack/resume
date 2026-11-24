@@ -31,53 +31,71 @@
   \end{subsectionnobullet}
 \end{section}
 
+% Public variant: internship work is described generically (no internal project names or figures).
+\begin{section}{EXPERIENCE}
+  \begin{subsection}
+    {Evolvent AI}
+    {Data Processing Intern, Research Data}
+    {Jul 2026 -- Present}
+    {Hangzhou, China}
+    \item Build pipelines that turn real open-source repositories into executable software-engineering tasks.
+    \item Pin repository revisions and auto-build Docker environments, validated by each repository's own tests.
+    \item Designed agent-based requirement discovery that turns user workflows into cross-module tasks.
+    \item Validate tasks with hidden tests, baseline regressions, reference/no-change controls, and solver runs.
+  \end{subsection}
+\end{section}
+
 \begin{section}{RESEARCH}
   \begin{subsection}
+    {Tool-Genesis: A Task-Driven Tool Creation Benchmark for Self-Evolving Language Agent}
+    {First author and maintainer -- arXiv 2026}
+    {2026}
+    {Chengdu, China}
+    \item Built 86 MCP server specs across 24 domains, with 508 reference tools and 9,441 held-out tests.
+    \item Implemented four evaluation levels, from server startup to downstream utility. \href{https://arxiv.org/abs/2603.05578}{Paper} \textbar{} \href{https://github.com/subway-jack/Tool-Genesis}{Code} \textbar{} \href{https://tool-genesis.github.io/}{Project}
+  \end{subsection}
+
+  \begin{subsection}
+    {Agent2World: Learning to Generate Symbolic World Models}
+    {Second author -- arXiv 2025}
+    {2025 -- 2026}
+    {}
+    \item Built research, development, and testing agents that generate PDDL domains and simulators.
+    \item Integrated unit tests, simulation feedback, and repair on Text2World, CWMB, and ByteSized32. \href{https://arxiv.org/abs/2512.22336}{Paper}
+  \end{subsection}
+
+  \begin{subsection}
     {OWL: Optimized Workforce Learning for General Multi-Agent Assistance}
-    {Researcher, fifth author -- NeurIPS 2025}
+    {Sixth author -- NeurIPS 2025}
     {Feb 2025 -- Sep 2025}
     {Remote}
-    \item Co-developed Workforce, a hierarchical multi-agent architecture that separates domain-agnostic planning, subtask coordination, and specialized tool-using workers.
-    \item Reported 69.70\% on GAIA and 52.73\% for the OWL-trained 32B planner; the paper was accepted at NeurIPS 2025.
-    \item \href{https://arxiv.org/abs/2505.23885}{Paper} \textbar{} \href{https://github.com/camel-ai/owl}{Code}
+    \item Co-developed the Workforce architecture: 69.70\% on GAIA, 52.73\% for the 32B planner. \href{https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html}{Paper} \textbar{} \href{https://github.com/camel-ai/owl}{Code}
   \end{subsection}
 
   \begin{subsection}
     {Structured Matrices for Long-Sequence Time-Series Forecasting}
-    {Researcher, fourth author -- Neurocomputing 2025}
+    {Fourth author -- Neurocomputing 2025}
     {Jan 2024 -- Apr 2025}
     {Chengdu, China}
-    \item Introduced structured surrogate attention and feed-forward blocks that retain expressive power while reducing time, space, and parameter costs.
-    \item Experiments over ten Transformer-based models reported a 12.4\% average performance gain and 61.3\% parameter reduction.
-    \item \href{https://arxiv.org/abs/2405.12462}{Paper} \textbar{} \href{https://doi.org/10.1016/j.neucom.2025.129429}{DOI}
+    \item Structured attention and feed-forward blocks: 12.4\% gain, 61.3\% fewer parameters. \href{https://arxiv.org/abs/2405.12462}{Paper} \textbar{} \href{https://doi.org/10.1016/j.neucom.2025.129429}{DOI}
   \end{subsection}
 \end{section}
 
 \begin{section}{SELECTED SYSTEMS \& OPEN SOURCE}
-  \begin{subsection}
-    {Tool-Genesis}
-    {Maintainer}
-    {2026 -- Present}
-    {Open source}
-    \item Developing a benchmark for latent contract recovery in MCP tool creation, spanning 86 server specifications, 24 domains, and 508 ground-truth tools.
-    \item Built a four-level diagnostic evaluation from surface compliance and schema fidelity to held-out functional tests and downstream task utility.
-    \item Published 9,441 held-out tests and a compact public dataset for reproducible evaluation. \href{https://github.com/subway-jack/Tool-Genesis}{Repository}
-  \end{subsection}
-
   \begin{subsection}
     {Agent Infrastructure Contributions}
     {Open-source contributor}
     {2025 -- Present}
     {Remote}
     \item Added asynchronous execution support to CAMEL-AI's BrowserToolkit in merged pull request \href{https://github.com/camel-ai/camel/pull/1886}{\#1886}.
-    \item Delivered 21 merged pull requests to \href{https://github.com/conpera/conpera-town/pulls?q=is%3Apr+author%3Asubway-jack+is%3Amerged}{Conpera Town}, covering economy systems, persistent interiors, map tooling, furniture APIs, and Tiled integration.
+    \item Delivered 21 merged pull requests to \href{https://github.com/conpera/conpera-town/pulls?q=is%3Apr+author%3Asubway-jack+is%3Amerged}{Conpera Town}: economy, interiors, maps, and Tiled.
   \end{subsection}
 \end{section}
 
 \sectiontable{HONORS \& AWARDS}{
-  \entry{Gold Award}{Provincial E-Commerce Innovation, Creativity and Entrepreneurship Challenge \hfill \textit{2023}}
+  \entry{First Prize}{18th Zhejiang College Students' E-Commerce Competition \hfill \textit{2023}}
   \entry{Honorable Mention}{Mathematical Contest in Modeling \hfill \textit{2023}}
-  \entry{Second Prize}{China Undergraduate Mathematical Contest in Modeling \hfill \textit{2022}}
+  \entry{Second Prize}{China Undergraduate Mathematical Contest in Modeling (Zhejiang) \hfill \textit{2022}}
 }
 
 \end{document}

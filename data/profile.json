@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "last_verified": "2026-07-10",
+  "last_verified": "2026-11-24",
   "visibility": "public",
   "person": {
     "name": "Bowei Xia",
     "name_zh": "夏博威",
     "pronouns": "he/him",
     "status": "MSc student in Computer Science at UESTC",
-    "bio": "I work on language agents, multi-agent systems, and agent evaluation.",
+    "bio": "I work on language agents, multi-agent systems, and agent evaluation, and currently build software-engineering task pipelines as a research data intern.",
     "headline": "Research engineer working on language agents, multi-agent systems, and evaluation",
     "summary": "Computer science graduate researcher building agent systems, evaluation benchmarks, and practical open-source infrastructure.",
     "email": "xiabowei350@gmail.com",
@@ -28,7 +28,9 @@
       "start": "2024-09",
       "end": "2027-06",
       "status": "in_progress",
-      "evidence": ["resume-src/bowei-xia-resume.tex"]
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ]
     },
     {
       "institution": "Ningbo University",
@@ -37,13 +39,52 @@
       "start": "2020-09",
       "end": "2024-06",
       "status": "completed",
-      "evidence": ["resume-src/bowei-xia-resume.tex"]
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ]
     }
   ],
   "publications": [
     {
+      "title": "Tool-Genesis: A Task-Driven Tool Creation Benchmark for Self-Evolving Language Agent",
+      "role": "First author and maintainer",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "summary": "A diagnostic benchmark for whether agents can build task-relevant MCP tools from abstract requirements alone, scored from interface compliance and functional correctness to downstream utility.",
+      "highlights": [
+        "86 MCP server specifications across 24 domains",
+        "508 reference tools and 9,441 held-out tests",
+        "Four-level evaluation: server startup, schema fidelity, functional correctness, and downstream task utility"
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2603.05578",
+        "code": "https://github.com/subway-jack/Tool-Genesis",
+        "project": "https://tool-genesis.github.io/"
+      },
+      "evidence": [
+        "https://arxiv.org/abs/2603.05578",
+        "https://github.com/subway-jack/Tool-Genesis#readme"
+      ]
+    },
+    {
+      "title": "Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi-Agent Feedback",
+      "role": "Second author",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "summary": "Research, development, and testing agents turn natural-language environment descriptions into PDDL domains or executable Python simulators, repaired through adaptive unit tests and simulation feedback.",
+      "highlights": [
+        "Evaluated on Text2World, CWMB, and ByteSized32"
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2512.22336"
+      },
+      "evidence": [
+        "https://arxiv.org/abs/2512.22336"
+      ]
+    },
+    {
       "title": "OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation",
-      "role": "Fifth author",
+      "role": "Sixth author",
       "venue": "NeurIPS 2025",
       "year": 2025,
       "summary": "A hierarchical multi-agent framework that separates planning, coordination, and specialized execution, with reinforcement learning for cross-domain planner generalization.",
@@ -52,11 +93,11 @@
         "52.73% for the OWL-trained 32B planner"
       ],
       "links": {
-        "paper": "https://arxiv.org/abs/2505.23885",
+        "paper": "https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html",
         "code": "https://github.com/camel-ai/owl"
       },
       "evidence": [
-        "https://arxiv.org/abs/2505.23885",
+        "https://papers.neurips.cc/paper_files/paper/2025/hash/48dcc43a534c5b582f9d0fdb778e9b84-Abstract-Conference.html",
         "https://github.com/camel-ai/owl#readme"
       ]
     },
@@ -82,35 +123,35 @@
   ],
   "projects": [
     {
-      "name": "Tool-Genesis",
-      "role": "Maintainer",
-      "year": 2026,
-      "summary": "A benchmark for evaluating whether language models can recover latent contracts and create functional MCP tools from incomplete requirements.",
-      "highlights": [
-        "86 server specifications across 24 domains",
-        "508 ground-truth tools and 9,441 held-out tests",
-        "Four-level diagnostic evaluation from surface compliance to task utility"
-      ],
-      "technologies": ["Python", "MCP", "LLM evaluation"],
-      "url": "https://github.com/subway-jack/Tool-Genesis",
-      "evidence": ["https://github.com/subway-jack/Tool-Genesis#readme"]
-    },
-    {
       "name": "notion-mcp-bridge",
       "role": "Creator",
       "year": 2026,
       "summary": "A persistent stdio bridge that keeps Notion MCP OAuth credentials in macOS Keychain for local coding agents.",
-      "technologies": ["Python", "MCP", "OAuth", "macOS Keychain"],
+      "technologies": [
+        "Python",
+        "MCP",
+        "OAuth",
+        "macOS Keychain"
+      ],
       "url": "https://github.com/subway-jack/notion-mcp-bridge",
-      "evidence": ["https://github.com/subway-jack/notion-mcp-bridge#readme"]
+      "evidence": [
+        "https://github.com/subway-jack/notion-mcp-bridge#readme"
+      ]
     },
     {
       "name": "Conpera Town",
       "role": "Open-source contributor",
       "year": 2026,
       "summary": "Implemented economy, building interiors, scene persistence, furniture APIs, map tooling, and Tiled integration for an AI town starter kit.",
-      "highlights": ["21 merged public pull requests"],
-      "technologies": ["TypeScript", "Convex", "Tiled", "Agent systems"],
+      "highlights": [
+        "21 merged public pull requests"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Convex",
+        "Tiled",
+        "Agent systems"
+      ],
       "url": "https://github.com/conpera/conpera-town/pulls?q=is%3Apr+author%3Asubway-jack+is%3Amerged",
       "evidence": [
         "https://github.com/conpera/conpera-town/pull/1",
@@ -127,27 +168,35 @@
       "status": "merged",
       "summary": "Added asynchronous execution support to BrowserToolkit.",
       "url": "https://github.com/camel-ai/camel/pull/1886",
-      "evidence": ["https://github.com/camel-ai/camel/pull/1886"]
+      "evidence": [
+        "https://github.com/camel-ai/camel/pull/1886"
+      ]
     }
   ],
   "awards": [
     {
-      "title": "Gold Award",
-      "awarder": "Provincial E-Commerce Innovation, Creativity and Entrepreneurship Challenge",
+      "title": "First Prize (Undergraduate)",
+      "awarder": "18th Zhejiang Provincial College Students' E-Commerce Competition",
       "year": 2023,
-      "evidence": ["resume-src/bowei-xia-resume.tex"]
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ]
     },
     {
       "title": "Honorable Mention",
       "awarder": "Mathematical Contest in Modeling",
       "year": 2023,
-      "evidence": ["resume-src/bowei-xia-resume.tex"]
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ]
     },
     {
-      "title": "Second Prize",
+      "title": "Second Prize (Zhejiang Province)",
       "awarder": "China Undergraduate Mathematical Contest in Modeling",
       "year": 2022,
-      "evidence": ["resume-src/bowei-xia-resume.tex"]
+      "evidence": [
+        "resume-src/bowei-xia-resume.tex"
+      ]
     }
   ],
   "privacy": {
@@ -159,5 +208,18 @@
       "third-party personal information"
     ],
     "policy": "Only first-party public information with explicit evidence is included."
-  }
+  },
+  "experience": [
+    {
+      "organization": "Evolvent AI",
+      "role": "Data Processing Intern",
+      "team": "Research Data",
+      "start": "2026-07",
+      "end": "present",
+      "summary": "Build pipelines that turn real open-source repositories into executable software-engineering tasks, covering reproducible Docker environments, agent-based requirement discovery, and test-based task validation in isolated environments.",
+      "evidence": [
+        "private record: signed internship agreement (2026-07)"
+      ]
+    }
+  ]
 }

@@ -17,6 +17,7 @@ PROFILE_PATH = ROOT / "data" / "profile.json"
 TEMPLATE_PATH = ROOT / "site-src" / "index.html"
 SITE_DIR = ROOT / "site"
 PUBLIC_BASE = "https://subway-jack.github.io/resume/"
+LINK_LABELS = {"doi": "DOI", "arxiv": "arXiv"}
 PHONE_RE = re.compile(r"(?<!\d)(?:\+?86[- ]?)?1[3-9]\d{9}(?!\d)")
 REQUIRED_PRIVACY_EXCLUSIONS = {
     "government identifiers",
@@ -69,7 +70,7 @@ def render_publications(profile: dict[str, Any]) -> str:
         if not publication.get("evidence"):
             raise BuildError("publication_missing_evidence")
         links = "".join(
-            external_link(url, label.title(), "work-link")
+            external_link(url, LINK_LABELS.get(label, label.title()), "work-link")
             for label, url in publication.get("links", {}).items()
         )
         items.append(
@@ -78,7 +79,7 @@ def render_publications(profile: dict[str, Any]) -> str:
               <div class="work-year">{esc(publication['year'])}</div>
               <div class="work-body">
                 <h3>{esc(publication['title'])}</h3>
-                <p class="work-meta">{esc(publication['venue'])}</p>
+                <p class="work-meta">{esc(publication['venue'])} · {esc(publication['role'])}</p>
                 <p class="work-summary">{esc(publication['summary'])}</p>
                 <div class="work-links">{links}</div>
               </div>
@@ -101,6 +102,31 @@ def render_projects(profile: dict[str, Any]) -> str:
                 <h3>{external_link(project['url'], project['name'], 'project-title')}</h3>
                 <p class="work-meta">{esc(project['role'])}</p>
                 <p class="work-summary">{esc(project['summary'])}</p>
+              </div>
+            </article>
+            """
+        )
+    return "".join(items)
+
+
+def experience_dates(item: dict[str, Any]) -> str:
+    end = "Present" if item["end"] == "present" else item["end"]
+    return f"{item['start']}–{end}"
+
+
+def render_experience(profile: dict[str, Any]) -> str:
+    items = []
+    for item in profile.get("experience", []):
+        if not item.get("evidence"):
+            raise BuildError("experience_missing_evidence")
+        items.append(
+            f"""
+            <article class="work-row">
+              <div class="work-year">{esc(experience_dates(item))}</div>
+              <div class="work-body">
+                <h3>{esc(item['organization'])}</h3>
+                <p class="work-meta">{esc(item['role'])} · {esc(item['team'])}</p>
+                <p class="work-summary">{esc(item['summary'])}</p>
               </div>
             </article>
             """
@@ -198,6 +224,7 @@ def render_index(profile: dict[str, Any]) -> str:
         "@@EMAIL@@": esc(person["email"]),
         "@@GITHUB@@": esc(person["github"]),
         "@@LAST_VERIFIED@@": esc(profile["last_verified"]),
+        "@@EXPERIENCE@@": render_experience(profile),
         "@@PUBLICATIONS@@": render_publications(profile),
         "@@PROJECTS@@": render_projects(profile),
         "@@CONTRIBUTIONS@@": render_contributions(profile),
@@ -231,6 +258,17 @@ def render_resume_markdown(profile: dict[str, Any]) -> str:
         lines.append(
             f"- **{item['institution']}** — {item['degree']}, {item['start']} to {item['end']}"
         )
+    if profile.get("experience"):
+        lines.extend(["", "## Experience", ""])
+        for item in profile["experience"]:
+            lines.extend(
+                [
+                    f"### {item['organization']}",
+                    f"{item['role']} · {item['team']} · {experience_dates(item)}",
+                    "",
+                    item["summary"],
+                ]
+            )
     lines.extend(["", "## Publications", ""])
     for item in profile["publications"]:
         lines.extend(
@@ -275,6 +313,10 @@ def render_llms(profile: dict[str, Any]) -> str:
         f"- {item['name']}: {item['summary']} — {item['url']}"
         for item in profile["projects"]
     )
+    experience_lines = "\n".join(
+        f"- {item['organization']} — {item['role']}, {item['team']} ({experience_dates(item)})"
+        for item in profile.get("experience", [])
+    )
     return f"""# {person['name']}
 
 > {person['headline']}
@@ -283,6 +325,10 @@ Canonical structured profile: {PUBLIC_BASE}profile.json
 Plain-text resume: {PUBLIC_BASE}resume.md
 Human-readable PDF: {PUBLIC_BASE}bowei-xia-resume.pdf
 GitHub: {person['github']}
+
+## Experience
+
+{experience_lines}
 
 ## Research
 
@@ -294,7 +340,7 @@ GitHub: {person['github']}
 
 ## Usage boundary
 
-Use only the evidence-backed public fields in profile.json. Do not infer private employment, contact details beyond the listed email, or third-party personal information.
+Use only the evidence-backed public fields in profile.json. Do not infer employment details beyond the listed experience, contact details beyond the listed email, or third-party personal information.
 
 Last verified: {profile['last_verified']}
 """
